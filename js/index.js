@@ -4,19 +4,19 @@ $(document).ready(function() {
 var city = $("#city-type").val();
 
 // State the function that will change the photo
-$("#submit-btn").click(changePhoto)
+$("#form").submit(changePhoto)
 
 // Define the function
 function changePhoto(event) {
 //Keep the page from automatically reloading
 	event.preventDefault();
 
-	if (city == "New York" || "NYC") {
+	if (city == "New York" || city == "NYC") {
 	$("body").removeClass();	
 	$("body").addClass("nyc");
 	console.log("New York");
 
-	} else if (city == "San Francisco" || "Frisco") { 
+	} else if (city == "San Francisco" || city == "Frisco") { 
 	$("body").removeClass();
 	$("body").addClass("sf");
 	console.log("San Francisco");
